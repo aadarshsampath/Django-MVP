@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'aadarsh.sampath@gmail.com'
+EMAIL_HOST_PASSWORD = 'Aadarshsam7%'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 
@@ -100,4 +105,28 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+#Change the static file URL , ROOT and static file DIRS 
+#Set these parameters to make modific to static files
+# always do python manage.py collectstatic for it to collect all ur static files 
+# and put them in the root.
+# If you want static files from another app ,add it to the apps folder.
+
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static_in_proj","static_root")
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static_in_proj","our_static"),
+   # '/var/www/static/',
+]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "static_in_proj","media_root")
+
+
+
+
+
+
+

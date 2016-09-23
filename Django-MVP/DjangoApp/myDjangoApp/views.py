@@ -13,7 +13,7 @@ def home(request):
 	#ALWAYS SAVE A FORM.
 	#THE VARIABLES U WANT VALUES TO APPEAR ARE IN CONTEXT.
 	
-
+	#This form relies completely on the models that was created. SignUp model.
 	form = SignUpForm(request.POST or None)
 	context = {
 	"form" : form
