@@ -1,1 +1,6 @@
-<h1> Sample template </h1>
+<h1> {{title}} </h1>
+<!--action tells us where it has to got for eg /abc will take us to url/abc after the for is posted -->
+<form method="POST" action="">{% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="SignUp" >
+</form>
