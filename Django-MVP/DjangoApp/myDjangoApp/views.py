@@ -28,4 +28,6 @@ def home(request):
 		"title":"Thankyou"
 		}
 	
-	return render(request, "home.html", context)
+	return render(request, "base.html", context)
+
+
